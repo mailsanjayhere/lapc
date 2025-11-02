@@ -18,7 +18,9 @@ AO           A0
 
 MQ-135
   VCC ──→ Arduino 5V
-  GND ──→ Arduino GND
+  
+  GND ──→ Arduino GN
+  
   AO  ──→ Arduino A0
 
 Step 2: Upload Test Code (1 Minute)
