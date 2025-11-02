@@ -11,28 +11,12 @@ Breadboard
 
 Step 1: Wire the MQ-135 (30 Seconds)
 
+MQ-135 PinConnect to Arduino
+VCC          5V
+GND          GND
+AO           A0
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-MQ-135 PinConnect to ArduinoVCC5VGNDGNDAOA0
-textMQ-135
+MQ-135
   VCC ──→ Arduino 5V
   GND ──→ Arduino GND
   AO  ──→ Arduino A0
@@ -52,30 +36,6 @@ void loop() {
 Upload → Open Serial Monitor (Ctrl+Shift+M) → set 9600 baud
 
 Step 3: See Results (2 Minutes)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 Air ConditionExpected ValueTest MethodClean room air80 – 200Just breathe normallyYour breath300 – 600Breathe directly on sensorSmoke / Dust600 – 1024Wave match smoke or dusty cloth
 Sensor needs 2–5 min warm-up → values stabilize after that.
