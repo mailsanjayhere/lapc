@@ -17,6 +17,7 @@ GND          GND
 AO           A0
 
 MQ-135
+
   VCC ──→ Arduino 5V
   
   GND ──→ Arduino GN
