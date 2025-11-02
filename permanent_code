@@ -1,0 +1,49 @@
+const int sensorPin = A0;
+const int fanPin = 6;        // IRF540N Gate
+const int greenPin = 9;
+const int yellowPin = 10;
+const int redPin = 11;
+
+const int moderate = 550;    // Your room baseline
+const int polluted = 650;    // Smoke detected
+
+void setup() {
+  pinMode(fanPin, OUTPUT);
+  pinMode(greenPin, OUTPUT);
+  pinMode(yellowPin, OUTPUT);
+  pinMode(redPin, OUTPUT);
+  digitalWrite(fanPin, LOW);
+  Serial.begin(9600);
+}
+
+void loop() {
+  int air = analogRead(sensorPin);
+  Serial.print("Air Quality: ");
+  Serial.println(air);
+
+  if (air > polluted) {
+    // RED — HEAVY POLLUTION
+    digitalWrite(redPin, HIGH);
+    digitalWrite(yellowPin, LOW);
+    digitalWrite(greenPin, LOW);
+    digitalWrite(fanPin, HIGH);  // BOTH FANS ON
+    Serial.println(">>> RED: CLEANING HEAVY SMOKE!");
+  }
+  else if (air > moderate) {
+    // YELLOW — MODERATE
+    digitalWrite(redPin, LOW);
+    digitalWrite(yellowPin, HIGH);
+    digitalWrite(greenPin, LOW);
+    digitalWrite(fanPin, HIGH);  // BOTH FANS ON
+    Serial.println(">> YELLOW: CLEANING...");
+  }
+  else {
+    // GREEN — CLEAN
+    digitalWrite(redPin, LOW);
+    digitalWrite(yellowPin, LOW);
+    digitalWrite(greenPin, HIGH);
+    digitalWrite(fanPin, LOW);   // FANS OFF
+    Serial.println("> GREEN: AIR IS CLEAN!");
+  }
+  delay(1000);
+}
