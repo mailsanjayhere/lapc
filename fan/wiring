@@ -1,0 +1,6 @@
+Arduino 5V ───────┬──→ Fan 1 Red
+                  └──→ Fan 2 Red
+
+Arduino D6 ──────→ IRF540N Gate
+IRF540N Drain ───→ Fan 1 & 2 Black (twisted)
+IRF540N Source ──→ Arduino GND
