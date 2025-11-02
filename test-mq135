@@ -1,0 +1,10 @@
+void setup() {
+  Serial.begin(9600);  // Open Serial Monitor
+}
+
+void loop() {
+  int value = analogRead(A0);  // Read sensor
+  Serial.print("MQ-135 Raw Value: ");
+  Serial.println(value);
+  delay(1000);  // Print every second
+}
