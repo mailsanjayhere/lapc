@@ -1,0 +1,4 @@
+LED Color,Arduino Pin,Meaning
+Green,D9,Clean air (below 550)
+Yellow,D10,Moderate (550-650)
+Red,D11,Polluted (above 650)
