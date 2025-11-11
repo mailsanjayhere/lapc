@@ -1,0 +1,14 @@
+Arduino Uno Pins
+  5V ───────────────────────┐
+                             │ [+5V Rail]
+  D9 ──► Green LED (long +)  │
+  D10 ──► Yellow LED (long +)│
+  D11 ──► Red LED (long +)   │
+                             │
+  GND ───────────────────────┘ [GND Rail]
+
+LED Cathodes (short legs):
+  Green (–) ──► 220Ω ──► GND Rail
+  Yellow (–) ──► 220Ω ──► GND Rail
+  Red (–) ──► 220Ω ──► GND Rail
+
